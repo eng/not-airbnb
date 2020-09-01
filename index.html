@@ -5,23 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Not Airbnb</title>
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://kit.fontawesome.com/d0bf6bf32c.js" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      flatpickr('#arrival', { dateFormat: "Y-m-d", altInput: true, altFormat: 'M j' });
+      flatpickr('#departure', { dateFormat: "Y-m-d", altInput: true, altFormat: 'M j' });
+    })
+  </script>
 </head>
 <body class="bg-grey-light">
   <nav class="bg-white p-4 mt-0 fixed w-full z-10 pin-t shadow-lg">
     <div class="mx-auto flex flex-wrap">
-      <div class="flex w-1/2 justify-start font-bold">
-        <a class="text-red-500 no-underline" href="#">
+      <div class="flex w-1/2 justify-start items-center font-bold">
+        <a class="text-red-600 no-underline" href="#">
           <span class="text-xl pl-2"><i class="text-4xl fab fa-airbnb align-middle"></i> not airbnb</span>
         </a>
       </div>
       <div class="flex w-1/2 pt-2 content-center justify-end">
-        
+        <div class="flex items-center border rounded-full pl-20 py-2">
+          <label for="arrival" class="flex-none">
+            <span class="block uppercase text-xs font-bold">arrival</span>
+            <input type="text" id="arrival" name="arrival" class="block focus:outline-none" value="2020-11-17">
+          </label>
+          <label for="departure" class="flex-none">
+            <span class="block uppercase text-xs font-bold">departure</span>
+            <input type="text" id="departure" name="departure" class="block focus:outline-none" value="2020-11-19">
+          </label>
+          <label for="guests" class="flex-none">
+            <span class="block uppercase text-xs font-bold">guests</span>
+            <input type="text" id="guests" name="guests" class="block focus:outline-none" value="2">
+          </label>
+          <button class="mr-4 text-white bg-red-600 rounded-full h-8 w-8"><i class="fas fa-search"></i></button>
+        </div>
       </div>
     </div>
   </nav>
 
-  <div class="pt-24 w-full h-screen">
+  <div class="pt-32 w-full">
     <div class="px-6">
       <p class="my-1 text-sm">10 stays, Nov 17-19, 2 guests</p>
       <h1 class="text-3xl font-bold">Stays in Chicago</h1>
@@ -30,14 +52,14 @@
     <div class="p-6 grid grid-cols-5 gap-4">
       <div class="leading-6">
         <a href="#"><img class="w-full rounded" src="https://picsum.photos/300/200"></a>
-        <p class="text-sm mt-2"><i class="fas fa-star text-red-500 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
+        <p class="text-sm mt-2"><i class="fas fa-star text-red-600 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
         <a href="#"><p>Entire Condominium - Near West Side HUGE 1700 sq ft 3bd West Loop...</p></a>
         <p><strong>$140</strong> / night</p>
         <p class="text-sm">$434 total</p>
       </div>
       <div class="leading-6">
         <a href="#"><img class="w-full rounded" src="https://picsum.photos/300/200"></a>
-        <p class="text-sm mt-2"><i class="fas fa-star text-red-500 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
+        <p class="text-sm mt-2"><i class="fas fa-star text-red-600 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
         <a href="#">
           <p>Entire Condominium - Near West Side HUGE 1700 sq ft 3bd West Loop...</p>
         </a>
@@ -46,7 +68,7 @@
       </div>
       <div class="leading-6">
         <a href="#"><img class="w-full rounded" src="https://picsum.photos/300/200"></a>
-        <p class="text-sm mt-2"><i class="fas fa-star text-red-500 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
+        <p class="text-sm mt-2"><i class="fas fa-star text-red-600 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
         <a href="#">
           <p>Entire Condominium - Near West Side HUGE 1700 sq ft 3bd West Loop...</p>
         </a>
@@ -55,7 +77,7 @@
       </div>
       <div class="leading-6">
         <a href="#"><img class="w-full rounded" src="https://picsum.photos/300/200"></a>
-        <p class="text-sm mt-2"><i class="fas fa-star text-red-500 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
+        <p class="text-sm mt-2"><i class="fas fa-star text-red-600 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
         <a href="#">
           <p>Entire Condominium - Near West Side HUGE 1700 sq ft 3bd West Loop...</p>
         </a>
@@ -64,7 +86,7 @@
       </div>
       <div class="leading-6">
         <a href="#"><img class="w-full rounded" src="https://picsum.photos/300/200"></a>
-        <p class="text-sm mt-2"><i class="fas fa-star text-red-500 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
+        <p class="text-sm mt-2"><i class="fas fa-star text-red-600 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
         <a href="#">
           <p>Entire Condominium - Near West Side HUGE 1700 sq ft 3bd West Loop...</p>
         </a>
@@ -73,7 +95,7 @@
       </div>
       <div class="leading-6">
         <a href="#"><img class="w-full rounded" src="https://picsum.photos/300/200"></a>
-        <p class="text-sm mt-2"><i class="fas fa-star text-red-500 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
+        <p class="text-sm mt-2"><i class="fas fa-star text-red-600 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
         <a href="#">
           <p>Entire Condominium - Near West Side HUGE 1700 sq ft 3bd West Loop...</p>
         </a>
@@ -82,7 +104,7 @@
       </div>
       <div class="leading-6">
         <a href="#"><img class="w-full rounded" src="https://picsum.photos/300/200"></a>
-        <p class="text-sm mt-2"><i class="fas fa-star text-red-500 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
+        <p class="text-sm mt-2"><i class="fas fa-star text-red-600 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
         <a href="#">
           <p>Entire Condominium - Near West Side HUGE 1700 sq ft 3bd West Loop...</p>
         </a>
@@ -91,7 +113,7 @@
       </div>
       <div class="leading-6">
         <a href="#"><img class="w-full rounded" src="https://picsum.photos/300/200"></a>
-        <p class="text-sm mt-2"><i class="fas fa-star text-red-500 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
+        <p class="text-sm mt-2"><i class="fas fa-star text-red-600 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
         <a href="#">
           <p>Entire Condominium - Near West Side HUGE 1700 sq ft 3bd West Loop...</p>
         </a>
@@ -100,7 +122,7 @@
       </div>
       <div class="leading-6">
         <a href="#"><img class="w-full rounded" src="https://picsum.photos/300/200"></a>
-        <p class="text-sm mt-2"><i class="fas fa-star text-red-500 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
+        <p class="text-sm mt-2"><i class="fas fa-star text-red-600 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
         <a href="#">
           <p>Entire Condominium - Near West Side HUGE 1700 sq ft 3bd West Loop...</p>
         </a>
@@ -109,7 +131,7 @@
       </div>
       <div class="leading-6">
         <a href="#"><img class="w-full rounded" src="https://picsum.photos/300/200"></a>
-        <p class="text-sm mt-2"><i class="fas fa-star text-red-500 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
+        <p class="text-sm mt-2"><i class="fas fa-star text-red-600 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
         <a href="#">
           <p>Entire Condominium - Near West Side HUGE 1700 sq ft 3bd West Loop...</p>
         </a>
@@ -119,5 +141,9 @@
       
     </div>
   </div>
+
+  <footer class="border-t p-8 text-grey-800 text-sm">
+    We hope it's obvious that this is <strong>not Airbnb</strong>. For academic use only.
+  </footer>
 </body>
 </html>
