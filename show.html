@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Not Airbnb</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://kit.fontawesome.com/d0bf6bf32c.js" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      flatpickr('#arrival', { dateFormat: "Y-m-d", altInput: true, altFormat: 'M j' });
+      flatpickr('#departure', { dateFormat: "Y-m-d", altInput: true, altFormat: 'M j' });
+    })
+  </script>
+</head>
+<body class="bg-grey-light">
+  <nav class="bg-white p-4 fixed w-full z-10 pin-t shadow-lg">
+    <div class="mx-auto flex flex-wrap">
+      <div class="flex w-1/2 justify-start items-center font-bold">
+        <a class="text-red-600 no-underline" href="#">
+          <span class="text-xl pl-2"><i class="text-4xl fab fa-airbnb align-middle"></i> not airbnb</span>
+        </a>
+      </div>
+      <div class="flex w-1/2 pt-2 content-center justify-end">
+        <div class="flex items-center border rounded-full pl-20 py-2">
+          <label for="arrival" class="flex-none">
+            <span class="block uppercase text-xs font-bold">arrival</span>
+            <input type="text" id="arrival" name="arrival" class="block focus:outline-none" value="2020-11-17">
+          </label>
+          <label for="departure" class="flex-none">
+            <span class="block uppercase text-xs font-bold">departure</span>
+            <input type="text" id="departure" name="departure" class="block focus:outline-none" value="2020-11-19">
+          </label>
+          <label for="guests" class="flex-none">
+            <span class="block uppercase text-xs font-bold">guests</span>
+            <input type="text" id="guests" name="guests" class="block focus:outline-none" value="2">
+          </label>
+          <button class="mr-4 text-white bg-red-600 rounded-full h-8 w-8"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="pt-32 pb-6 px-6 w-full">
+    <div class="grid grid-cols-4 grid-rows-2 gap-2">
+      <div class="col-span-2 row-span-2"><img class="w-full h-full rounded-l-lg" src="https://picsum.photos/300/200"></div>
+      <div class="col-span-1 row-span-1"><img class="w-full h-full" src="https://picsum.photos/300/200"></div>
+      <div class="col-span-1 row-span-1"><img class="w-full h-full rounded-tr-lg" src="https://picsum.photos/300/200"></div>
+      <div class="col-span-1 row-span-1"><img class="w-full h-full" src="https://picsum.photos/300/200"></div>
+      <div class="col-span-1 row-span-1"><img class="w-full h-full rounded-br-lg" src="https://picsum.photos/300/200"></div>
+    </div>
+    <h1 class="mt-4 text-3xl font-bold">Studio Space w/ Private Bathroom</h1>
+    <p class="text-sm my-2"><i class="fas fa-star text-red-600 mr-1"></i>4.3 <span class="text-gray-600">(76)</span></p>
+    <hr class="my-8">
+    <h3 class="mt-4 text-2xl font-bold">Private room in house hosted by Brian</h3>
+    <p class="text-sm my-2">4 guests · 1 bedroom · 1 bed · 1 private bath</p>
+    <hr class="my-8">
+    <p class="text-sm mt-2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta, leo ut accumsan porta, nunc libero tincidunt
+      diam, commodo auctor elit ex sed augue. Nam semper velit justo, in elementum nisi fringilla vitae. In lobortis, purus id
+      luctus mattis, orci diam viverra magna, sed accumsan elit erat vitae urna. Mauris et libero et lectus aliquet egestas.
+      Aenean sed vehicula ex. Donec ac enim arcu. Proin sagittis lectus eget facilisis lacinia. Nullam gravida ipsum sed erat
+      faucibus malesuada. Aliquam faucibus fermentum lectus, commodo pretium tellus posuere a. Sed quis lacus non erat dictum
+      porta at sit amet lectus. Cras nisi justo, mattis eget erat in, elementum viverra purus. Mauris dapibus massa nec mi
+      aliquet luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris varius,
+      purus sed varius lobortis, risus dui ultricies arcu, at semper turpis leo vel diam. Vestibulum in porttitor tortor, sed
+      luctus enim.
+    </p>
+    <p class="text-sm mt-2">
+      Cras luctus, elit euismod aliquam consequat, risus tortor mollis ipsum, rhoncus tristique quam libero suscipit nulla.
+      Vestibulum tempus id nibh blandit egestas. Integer interdum felis mi, semper blandit sem pharetra in. Nam posuere, odio
+      sit amet finibus laoreet, risus sem convallis nunc, eu placerat orci felis vitae ante. Praesent ultricies dolor leo, et
+      faucibus tortor accumsan vel. Phasellus orci leo, auctor sed ipsum in, tincidunt pharetra nunc. Sed sit amet odio
+      hendrerit ante laoreet vestibulum vel sit amet est. Praesent mattis congue aliquet. Ut commodo non ante ut laoreet.
+      Etiam consectetur, risus nec venenatis molestie, dolor lacus accumsan felis, et commodo erat lacus sit amet orci.
+      Vivamus eleifend mi massa, ut facilisis massa aliquet non.
+    </p>
+    <p class="text-sm mt-2">
+      Proin tempus purus sed leo semper, id placerat neque malesuada. Nulla bibendum lectus quis nunc auctor, rhoncus volutpat
+      nisl hendrerit. Vivamus convallis lacus sit amet mauris venenatis, cursus ornare tellus feugiat. Sed elit dolor,
+      tristique non mattis a, hendrerit a leo. Nulla ac semper odio, in luctus leo. Sed quis ultrices libero, non bibendum
+      dui. In hac habitasse platea dictumst. Aenean lacinia mi sapien, sit amet facilisis sem volutpat in. In hac habitasse
+      platea dictumst.
+    </p>
+  </div>
+
+  <footer class="border-t p-6 text-grey-800 text-sm">
+    We hope it's obvious that this is <strong>not Airbnb</strong>. For academic use only.
+  </footer>
+</body>
+</html>
